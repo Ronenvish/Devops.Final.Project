@@ -4,15 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Devops Project</title>
   </head>
   <body>
-    <div>
-      <h1>Devops project</h1>
-      <h3>this is our project (Yuval)</h3>
-      <p>second commit (Yuval)</p>
-      <p>Moshe ha GEVER-AL</p>
-      <button type="button">click me!</button>
+    <div class="main-div">
+      <h1 class="main-header">Devops Final project</h1>
+      <p class="main-p">
+        Our mission is to deliver an application from development into
+        production, leveraging the knowledge we gained in DevOps course:
+        Orchestrate, control, deploy, automate, monitor and performance test /
+        analysis!
+      </p>
+      <button type="button" class="main-button">Click Me!</button>
     </div>
+
+    <script>
+      let ulVisability = false;
+      const arr = ["Ronen", "Ben", "Adi", "Eran", "Yuval"];
+      const button = document.querySelector("button");
+      const div = document.querySelector("div");
+
+      button.addEventListener("click", () => {
+        const ulElement = document.createElement("ul");
+        ulElement.setAttribute("id", "main-ul");
+
+        if (!ulVisability) {
+          for (i = 0; i <= arr.length - 1; i++) {
+            const liElement = document.createElement("li");
+            liElement.innerHTML = arr[i] + "  " + "😁";
+            liElement.setAttribute("class", "main-li");
+            ulElement.appendChild(liElement);
+          }
+          div.appendChild(ulElement);
+          ulVisability = !ulVisability;
+        } else {
+          const element = document.getElementById("main-ul");
+          element.remove();
+          ulVisability = !ulVisability;
+        }
+      });
+    </script>
   </body>
 </html>

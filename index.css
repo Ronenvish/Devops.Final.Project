@@ -1,0 +1,39 @@
+.main-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-p {
+  width: 500px;
+}
+
+.main-header {
+  color: blue;
+}
+
+.main-li {
+  display: block;
+  color: red;
+}
+
+.main-button {
+  background-color: #0e60a4;
+  border-radius: 50px;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 50px;
+  padding: 0 25px;
+  transition: all 200ms;
+}
+
+.main-button:hover {
+  background-color: #0c518a;
+  transform: scale(1.05);
+}
