@@ -9,14 +9,18 @@
   </head>
   <body>
     <div class="main-div">
-      <h1 class="main-header">Devops Final project</h1>
-      <p class="main-p">
-        Our mission is to deliver an application from development into
-        production, leveraging the knowledge we gained in DevOps course:
-        Orchestrate, control, deploy, automate, monitor and performance test /
-        analysis!
-      </p>
-      <button type="button" class="main-button">Click Me!</button>
+      <div class="first-inner-div">
+        <h1 class="main-header">Devops Final project</h1>
+      </div>
+      <div class="second-inner-div">
+        <p class="main-p">
+          “ Our mission is to deliver an application from development into
+          production, leveraging the knowledge we gained in DevOps course:
+          Orchestrate, control, deploy, automate, monitor and performance test /
+          analysis! “
+        </p>
+        <button type="button" class="main-button">Click Me!</button>
+      </div>
     </div>
 
     <script>
@@ -33,7 +37,7 @@
           for (i = 0; i <= arr.length - 1; i++) {
             const liElement = document.createElement("li");
             liElement.innerHTML = arr[i] + "  " + "😁";
-            liElement.setAttribute("class", "main-li");
+            liElement.setAttribute("class", "main-li fadein fade-item");
             ulElement.appendChild(liElement);
           }
           div.appendChild(ulElement);
